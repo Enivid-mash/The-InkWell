@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% block sub_content %}
+<div class="container">
   {% if my_blogs %}
     <table cellpadding="5" >
     {% for my_blog in my_blogs %}
@@ -14,4 +15,5 @@
   {% else %}
     <h3>No blogs have been written by you</h3>
   {% endif %}
+ </div>
 {% endblock %}

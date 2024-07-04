@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block sub_content %}
+<div class="container">
   {% if blogs %}
     {% for blog in blogs %}
       <h3> <a href="/blogs/{{ blog['blog_id'] }}">{{blog['title']}} </a> </h3>
@@ -10,4 +11,5 @@
   {% else %}
     <h3>No blogs have been written yet</h3>
   {% endif %}
+</div>
 {% endblock %}

@@ -1,0 +1,32 @@
+/* custom.css */
+body {
+  background-color: linear-gradient(to right, #f8e2ff, #f3eefa); /* Gradient background */
+  font-family: Arial, sans-serif; /* Set a fallback font */
+  font-size: 16px; /* Adjust font size for body text */
+  color: #333; /* Dark text color for body content */
+}
+
+h1 {
+  color: #f0545e; /* Vibrant pink */
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Open Sans', sans-serif; /* Use a more modern font for headings */
+  font-size: 2em; /* Set a larger size for headings */
+}
+
+.navbar {
+  margin-bottom: 20px;
+  margin: 0 20px; /* Adjust the pixel value (20px) for desired spacing */
+  background-color: #e7edf3; /* Light blue background for navbar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  font-family: Arial, sans-serif; /* Set a fallback font for navbar */
+}
+
+.nav-link {
+  color: #333333; /* Dark text color */
+  font-weight: bold; /* Make link text bolder for better contrast */
+  &:hover { /* Change color on hover */
+    color: #007bff;
+  }
+}
+
