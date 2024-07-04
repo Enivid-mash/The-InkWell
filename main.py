@@ -38,6 +38,20 @@ def about():
     """Route for the 'About' page."""
     return render_template('about.html')
 
+@app.route('/landing_page')
+def landing_page():
+    return render_template('landing_page.html')
+
+@app.route('/subscribe', methods=['POST'])
+def subscribe():
+    email = request.form['email']
+    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursor.execute('INSERT INTO subscribers (email) VALUES (%s)', (email,))
+    mysql.connection.commit()
+    cursor.close()
+    flash('Successfully subscribed to the newsletter!', 'success')
+    return redirect(url_for('landing_page'))
+
 @app.route('/blogs/<int:id>/')
 def blogs(id):
     """Route to display a specific blog post by its ID."""
