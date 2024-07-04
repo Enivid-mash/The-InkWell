@@ -36,13 +36,13 @@ The project is developed as a full-stack application to provide hands-on experie
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/microblog-web-application.git
-    cd microblog-web-application
+    git clone https://github.com/Enivid-mash/The-InkWell.git
+    cd The-InkWell 
     ```
 
 2. Set up a virtual environment:
     ```bash
-    python -m venv venv
+    python3.8 -m venv venv
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     ```
 
