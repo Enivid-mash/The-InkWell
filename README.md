@@ -1,5 +1,8 @@
 ### A Blog Web Application
 
+![View of the landingpage](landingpage.PNG)
+![View of the homepage](homepage.PNG)
+
 Welcome to the Microblog Web Application project! This project is a simple yet powerful platform for users to share their thoughts and experiences through microblogging.
 
 ## Table of Contents
