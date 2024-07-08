@@ -45,12 +45,12 @@ def landing_page():
 @app.route('/subscribe', methods=['POST'])
 def subscribe():
     email = request.form['email']
-    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursor = mysql.connection.cursor()
     cursor.execute('INSERT INTO subscribers (email) VALUES (%s)', (email,))
     mysql.connection.commit()
     cursor.close()
     flash('Successfully subscribed to the newsletter!', 'success')
-    return redirect(url_for('landing_page'))
+    return redirect('/')
 
 @app.route('/blogs/<int:id>/')
 def blogs(id):
