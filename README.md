@@ -53,7 +53,7 @@ The project is developed as a full-stack application to provide hands-on experie
 
 4. Configure the MySQL database:
     - Create a database named `your_database_name`.
-    - Update the MySQL configurations in `app.py`:
+    - Update the MySQL configurations in `main.py`:
         ```python
         app.config['MYSQL_HOST'] = 'localhost'
         app.config['MYSQL_USER'] = 'your_mysql_user'
@@ -64,15 +64,30 @@ The project is developed as a full-stack application to provide hands-on experie
 5. Create the necessary tables:
     ```sql
 	CREATE DATABASE <your_database_name>;
+
 	USE <your_database_name>;
-	CREATE TABLE user(user_id int auto_increment, first_name varchar(20), last_name varchar(20), username varchar(20) unique, email varchar(30) unique, password varchar(100), primary key(user_id));
 
-	CREATE TABLE blog(blog_id int auto_increment, title varchar(100), author varchar(40), body varchar(20000), primary key(blog_id));
+	CREATE TABLE user(
+			user_id int auto_increment,
+			first_name varchar(20), 
+			last_name varchar(20), 
+			username varchar(20) unique, 
+			email varchar(30) unique, 
+			password varchar(100), 
+			primary key(user_id)
+		);
 
-    CREATE TABLE subscribers (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        email VARCHAR(255) NOT NULL
-    );
+	CREATE TABLE blog(
+			blog_id int auto_increment, 
+			title varchar(100), 
+			author varchar(40), 
+			body varchar(20000), 
+			primary key(blog_id)
+		);
+
+    CREATE TABLE subscribers (id INT AUTO_INCREMENT PRIMARY KEY, 
+			email VARCHAR(255) NOT NULL
+	    );
     ```
 
 6. Run the application:
