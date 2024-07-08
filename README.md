@@ -63,6 +63,7 @@ The project is developed as a full-stack application to provide hands-on experie
         app.config['MYSQL_PASSWORD'] = 'your_mysql_password'
         app.config['MYSQL_DB'] = 'your_database_name'
         ```
+	- Comment out line 14, i.e. `db = yaml.load(open('mysql-conn.yaml'), Loader=Loader)`
 
 5. Create the necessary tables:
     ```sql
